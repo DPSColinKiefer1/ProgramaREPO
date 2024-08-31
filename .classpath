@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="1_ENCAPSULAMIENTO/src"/>
+	<classpathentry kind="src" path="2/2_JERARQUIA/src"/>
+	<classpathentry kind="src" path="3_Asociacion/src"/>
+	<classpathentry kind="src" path="4_herencia01/src"/>
+	<classpathentry kind="src" path="6_TODOPARTE/src"/>
+	<classpathentry kind="src" path="8_INTERFACES/src"/>
+	<classpathentry kind="src" path="9_Racional/src"/>
+	<classpathentry kind="src" path="910_CASO_INTEGRADOR/src"/>
+	<classpathentry kind="src" path="911_ArraylistGENERICS/src"/>
+	<classpathentry kind="src" path="912_ArrayListYLinkeList/src"/>
+	<classpathentry kind="src" path="913_hashmap/src"/>
+	<classpathentry kind="src" path="914_PilaGenerica/src"/>
+	<classpathentry kind="src" path="915_MetodoGenerico/src"/>
+	<classpathentry kind="src" path="916_LAMBDA/src"/>
+	<classpathentry kind="src" path="917_PATRON_SINGLETON/src"/>
+	<classpathentry kind="src" path="918_patron_FactoryYMethod/src"/>
+	<classpathentry kind="output" path="1_ENCAPSULAMIENTO/bin"/>
+</classpath>
