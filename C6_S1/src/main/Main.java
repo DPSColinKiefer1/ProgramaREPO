@@ -24,15 +24,17 @@ public class Main {
 			//al multiplicarlo por 8001 se obtiene un valor entre 0 y 8000, osea, un valor mayor a 0 pero menor a 8001, osea, que solo llega a 8000
 			//luego al sumar con 1000 el valor generado, se obtiene un valor entre 1000 y 9000, pudiendo tambien ser 1000 o 9000 ya que suma no multiplica
 			//al final, al usar (int) el resultado sera solo la parte entera del valor resultante
-			notas[i]=(int)(Math.random()*21);
-			System.out.println(codigos[i]+"\t"+notas[i]);
-			sum+=notas[i];
+			notas[i]=(int)(Math.random()*21); //se le asigna un valor entre o igual a 0 hasta 20 
+			//al array notas que le toca por i
+			System.out.println(codigos[i]+"\t"+notas[i]); //los imprimera las notaas y el codigo recien puesto
+			sum+=notas[i]; //se le suma las nota recien asignada, de este modo al final se el resultado sera la suma de todas las notas
 		}
-		double prom=sum*1.0/n;
-		System.out.println("promedio: "+prom);
-		for(int i=0;i<notas.length;i++) {
-			if(notas[i]>prom) {
-				System.out.println(codigos[i]+"\t");
+		double prom=sum*1.0/n; //se le asigna una variable recien creada para el promedio la division del total de las notas entre la cantidad total pedida, se le multipli
+		//ca con 1.0 para que arroje valores en double
+		System.out.println("promedio: "+prom); //se imprime el promedio
+		for(int i=0;i<notas.length;i++) { //se recorre de nuevo las arrays dependiendo el tamaño de el array notas
+			if(notas[i]>prom) { //si la nota de turno es mayor al promedio...
+				System.out.println(codigos[i]+"\t"); //se imprime su codigo
 			}
 			System.out.println();
 		}
