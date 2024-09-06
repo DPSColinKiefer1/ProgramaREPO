@@ -11,7 +11,9 @@ package c4_s1;
 public class C4_S1 {
 
     /**
-     * @param args the command line arguments
+     * a)  método que acepte como parámetro una matriz cuadrada y devuelva una matriz triángular inferior.
+     * b) método que acepte como parámetro una matriz cuadrada y devuelva la suma de los elementos que están encima de la diagonal 
+     * secundaria.
      */
     public static void main(String[] args) {
         // TODO code application logic here
@@ -21,10 +23,13 @@ public class C4_S1 {
                 {1,2,3,1,2},
                 {1,2,3,1,2}};
         mostrarMatriz(m);
-        int [][] matrizTriSup=convierteTriSup(m);
-        System.out.println("-------------------");
-        mostrarMatriz(convierteTriSup(matrizTriSup));
-
+        System.out.println(m.length); //cuenta la cantidad de matrices dentro de la mariz bidencional, osea, como son 5 entonces
+        //esa es la cantidad
+        int [][] matrizTriINF=convierteTriInf(m);
+        System.out.println("----------------------------");
+        mostrarMatriz(matrizTriINF);
+        System.out.println("----------------------------");
+        
     }
     public static void mostrarMatriz(int[][] m){
         for(int i=0;i<m.length;i++){
@@ -32,6 +37,14 @@ public class C4_S1 {
                 System.out.print(m[i][j]+"\t");
             System.out.println();
         }
+    }
+    public static int[][] convierteTriInf(int[][] m){
+        int[][] matResult1 = m; //esta copia el contenido de la matriz del parametro en esta nueva matriz
+        for(int i=0;i<m.length;i++){
+            for(int j=0;j<m[0].length;j++)
+                if(i < j) matResult1[i][j]=0;
+        }
+        return matResult1;
     }
     public static int[][] convierteTriSup(int[][] m){
         int[][] matResult = m; //esta copia el contenido de la matriz del parametro en esta nueva matriz
@@ -41,4 +54,17 @@ public class C4_S1 {
         }
         return matResult;
     }
+    public static int[][] convierteTriSupSECUN(int[][] m){
+        int[][] matResult = m; //esta copia el contenido de la matriz del parametro en esta nueva matriz
+        int suma=0;
+        for(int i=0;i<m.length;i++){
+            for(int j=0;j<m[0].length;j++){
+                if(i+j < m.length-1){
+                suma+=matResult[i][j];     
+            }   
+            }   
+        }
+        return matResult;
+    }
+    
 }
