@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formulario de Ejemplo</title> <!--Pal titulo-->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='3.5_formulariocss.css'> <!--En esta parte va lo que seria el vinculo con el archivo css que daria estilo a nuestro trabajo. Se debe escribir su nombre para que funcione-->
+    <script src='main.js'></script>
+</head>
+<body> <!--Aqui comienza el contenido-->
+    <form>
+        <!--    Tu nombre: <input type="text"/> <br/><br/>
+        Tu apellido: <input/> <br/><br/>
+        Contraseña: <input type="password"/> <br/><br/>
+        Haz leido todo los terminos? <input type="checkbox"/> <br/><br/>
+        Eres mayor de edad?: Si <input type="radio"/> 
+        No <input type="radio"/> <br/><br/> 
+        Envia tu CV: <input type="file"/> <br/><br/>
+        Tu grado academico que culminaste fue: <select>
+            <option>Sin grado academico culminado</option>
+            <option>Primaria</option>
+            <option>Secundaria</option>
+            <option>Universidad</option>
+        </select> <br/><br/>
+        Porque quieres trabajar con nosotros?<br/><br/> <textarea name="Razon"></textarea> <br/><br/>
+        Enviar: <input type="submit"/> <br/><br/>
+    </form>
+    </form>-->
+        <div> <!--Para la imagen se usa la etiqueta "div" y "img"-->
+            <img src="C:\Users\delpi\Downloads\Imagen rara.jpg" alt="Imagen de Ejemplo"> <!--en src va la ruta de la imagen y alt va el nombre que se le daria-->
+        </div>
+        <h1>Formulario de Entrevista</h1><br/> <!--Encabezado-->
+        <label for="Nombre">Tu nombre: </label> <!--Se emplea la etiqueta label junto con el atributo que usaria el input "Nombre" y su tipo de acuerdo con su id-->
+        <input type="text" id="Nombre"/> <br/><br/> <!--Se declara el tipo y el id que empleara esta etiqueta-->
+        <label for="Apellido">Tu apellido: </label>
+        <input type="text" id="Apellido"/> <br/><br/>
+        <label for="correo">Tu correo: </label>
+        <input type="password" id="correo"/> <br/><br/>
+        <label for="terminos?">Haz leido todo los terminos?: </label>
+        <input type="checkbox" id="terminos?"/> <br/><br/>
+        <label for="edad1"> Eres mayor de edad?: Si </label>
+        <input type="radio" id="edad1"/>
+        <label for="edad"> No </label>
+        <input type="radio" id="edad"/> <br/><br/>
+        <label for="filez"> Envia tu CV: </label>
+        <input type="file" id="filez"/> <br/><br/>
+        Tu grado academico que culminaste fue: <select> <!--Se emplea la etiqueta select y la etiqueta option para hacer un desplegable-->
+            <option>Sin grado academico culminado</option>
+            <option>Primaria</option>
+            <option>Secundaria</option>
+            <option>Universidad</option>
+        </select> <br/><br/><br/>
+        <label for="RazonPrecisa">Porque quieres trabajar con nosotros? <br/></label> <!--Se emple el <br/> para que el cuadro de texto no venga despues del tipo si no que vaya abajo-->
+        <textarea name="Razon" id="RazonPrecisa"></textarea> <br/><br/>
+        <label for="enviar"> Envia tus datos: </label>
+        <input type="submit" id="enviar"/> <br/><br/>    </form>
+</body>
+</html></html>

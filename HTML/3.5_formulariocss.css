@@ -1,0 +1,46 @@
+*{ /*margin y padding se ponen en 0 para eliminar los márgenes y el relleno predeterminado de todos los elementos para lograr un diseño más controlado y uniforme*/
+    margin: 0; 
+    padding: 0;
+}
+body{
+    background-color:rgb(138, 65, 138);/*Para poner color al fondo de la pagina*/
+    font-family:Verdana, Geneva, Tahoma, sans-serif; /*Pone el tipo de letra*/
+    display: flex; /*se usa para organizar el contenido del cuerpo de la pagina*/
+    justify-content: center; /*centra el contenido horizontalmente dentro del cuerpo*/
+    align-items: center;/*centra el contenido verticalmente dentro del cuerpo*/
+    height: 100vh; /*ajusta la altura del cuerpo al 100% de la altura de la ventana del navegador*/
+}
+h1{
+    text-align: center; /*centra el */
+    color: slateblue; /*aplica este color al encabezado*/
+    padding: 20px; /*añade un relleno de 20pixeles alrededor del texto del encabezado*/
+}
+form{ /*estilos para los formulario*/
+    background-color: rgb(245, 209, 243); /*le pone el color de fondo al contenido dentro del form*/
+    color: rgb(176, 7, 255); /*el color del texto dentro del form*/
+    padding: 50px 90px;/*añade un relleno de 50px arriba y abajo y 90 a los lados*/
+    border: none; /*elimina el borde del formulario*/
+    border-radius: 100px; /*los redonde con 100px*/
+}
+input, textarea, select{ /*estilos compartidos para los inputs, textarea, y el select(desplegable)*/
+    margin-top: 20px; /*añade un margen superiro de 20px*/
+}
+textarea{ /*para el cuadro de texto*/
+    border: none; /*elimina su borde*/
+    border-radius: 8px; /*lo redondea*/
+    padding: 50px 70px; /*le mete relleno en todo su entorno*/
+    text-align: left; /*alinea el texto a la izquierda*/
+}
+input[type="submit"]{ /*para los input de tipo submit(solo es para el cuadradito de enviar)*/
+    background-color: rgba(252, 252, 252, 0.966); /*se le cambia el fondo del cuadrado*/
+    color: darkorchid; /*las letras*/
+    padding: 5px 10px; /*se le mete relleno para cambiar su tamaño*/
+    border: none; /*se elimina su borde*/
+    border-radius: 8px; /*se le mete redondeo a ellos*/
+}
+div > img{ /*estilos para imagenes dentro de una etiqueta "div"*/
+    width: 30%; /*el ancho de la imagen al 30% del ancho del contenedor*/
+    border-radius: 10px; /*redondea los bordes de la imagen*/
+    margin: 0 auto; /*centra la imagen horizontalmente dentro de su contenedor*/
+    display: block; /*hace que la imagen sea un elemento de bloque*/
+}
