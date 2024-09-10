@@ -17,5 +17,7 @@
 	<classpathentry kind="src" path="916_LAMBDA/src"/>
 	<classpathentry kind="src" path="917_PATRON_SINGLETON/src"/>
 	<classpathentry kind="src" path="918_patron_FactoryYMethod/src"/>
+	<classpathentry kind="src" path="C6_S4_Tarea/src"/>
+	<classpathentry kind="src" path="C6_S4_Tarea1/src/Tarea"/>
 	<classpathentry kind="output" path="1_ENCAPSULAMIENTO/bin"/>
 </classpath>

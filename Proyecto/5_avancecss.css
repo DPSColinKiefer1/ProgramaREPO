@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: blanchedalmond;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+h1 {
+    color: #d62b0d;
+    font-style: inherit;
+    text-align: center;
+    font-size: 80px;
+    text-decoration: underline;
+}
+div {
+    display: flex;
+    flex-direction: column;
+}
+img {
+    display: block;
+    margin: 40px auto;
+    width: 70%;
+    border-radius: 20px;
+    border: rgb(221, 197, 168) 5px solid;
+    cursor: pointer;
+}
