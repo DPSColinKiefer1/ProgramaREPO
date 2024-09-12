@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package c4_s1;
+package main;
 
 /**
  *
  * @author LAB-USR-LCENTRO
  */
-public class C4_S1 {
+public class main  {
 
     /**
      * a)  método que acepte como parámetro una matriz cuadrada y devuelva una matriz triángular inferior.
