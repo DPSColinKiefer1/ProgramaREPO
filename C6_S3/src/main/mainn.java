@@ -8,6 +8,8 @@ public class mainn {
 		// TODO Auto-generated method stub
 		GestionArreglo ga1 = new GestionArreglo(10);
 		ga1.mostrarArreglo();
+
+	
 	}
 
 }

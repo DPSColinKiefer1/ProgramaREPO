@@ -28,6 +28,8 @@ public class main  {
         int [][] matrizTriINF=convierteTriInf(m);
         System.out.println("----------------------------");
         mostrarMatriz(matrizTriINF);
+        int suma = sumaEncimaDiagonalSecundaria(m);
+		System.out.println(suma);
         System.out.println("----------------------------");
         
     }
@@ -65,6 +67,17 @@ public class main  {
             }   
         }
         return matResult;
+    }
+    public static int sumaEncimaDiagonalSecundaria(int[][] m) {
+        int suma = 0;
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[0].length; j++) {
+                if (i + j < m.length - 1) { // Condición para elementos encima de la diagonal secundaria
+                    suma += m[i][j];
+                }
+            }
+        }
+        return suma;
     }
     
 }
