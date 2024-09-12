@@ -2,7 +2,7 @@ package main;
 
 import java.util.Scanner;
 
-public class Main {
+public class main {
 	/*
 	 * caso1: se tienen los códigos[1000-9000] y las notas vigesimales de "n"
 	 * estudiantes. Se pide hallar el promedio y los códigos de los estudiantes cuya
