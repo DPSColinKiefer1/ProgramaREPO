@@ -7,6 +7,35 @@ body{
     font-family: 'Times New Roman', Times, serif;
     min-height: 100vh;
 }
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 40px;
+    font-size: 50px;
+    text-decoration: underline;
+    text-align: center;
+}
+h1{
+    color: #d62b0d;
+    text-align: center;
+    font-size: 85px;
+    margin: 20px;
+}
 div{
     margin: 40px;
+    font-size: xx-large;
+    background-color: gold;
+}
+table{
+    justify-content: center;
+    margin: 270px;
+    font-size: xx-large;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    table-layout: auto;
+}
+table caption{
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
