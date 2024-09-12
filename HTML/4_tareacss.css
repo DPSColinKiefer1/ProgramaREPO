@@ -41,14 +41,14 @@ th{
     cursor: pointer;
 }
 
-div > img{ /*estilos para imagenes dentro de una etiqueta "div"*/
-    width: 30%; /*el ancho de la imagen al 30% del ancho del contenedor*/
-    border-radius: 10px; /*redondea los bordes de la imagen*/
-    margin: 0 auto; /*centra la imagen horizontalmente dentro de su contenedor*/
-    display: block; /*hace que la imagen sea un elemento de bloque*/
+
+tbody tr:hover {
+    background-color: lightgray;
 }
-/* Cambiar el color de fondo de toda la fila al pasar el cursor */
-tbody tr: {
-    background-color: rgb(132, 15, 15); /* Cambia a tu color preferido */
-    transition: background-color 0.3s; /* Suaviza la transición de color */
+tfoot tr:hover {
+    background-color: lightgreen;
 }
+tfoot{
+    cursor: pointer;
+}
+
