@@ -12,6 +12,8 @@ public class main {
 			 * for(int i=0;i<GestionArreglo.miArreglo.length;i++){
 			 * GestionArreglo.miArreglo[i]=2*i+1; }
 			 */
+	        garray.insertaelemxorden(11);
+
 	        garray.mostrar();
 			/*
 			 * garray.insertaelemxindice(200, 2); System.out.print("\n");

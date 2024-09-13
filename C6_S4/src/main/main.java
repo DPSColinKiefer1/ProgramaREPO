@@ -25,7 +25,12 @@ public class main  {
         mostrarMatriz(m);
         System.out.println(m.length); //cuenta la cantidad de matrices dentro de la mariz bidencional, osea, como son 5 entonces
         //esa es la cantidad
+        System.out.println("----------------------------");
         int [][] matrizTriINF=convierteTriInf(m);
+        mostrarMatriz(matrizTriINF);
+        System.out.println("----------------------------");
+        int [][] matrizTriSUP=convierteTriSup(m);
+        mostrarMatriz(matrizTriSUP);
         System.out.println("----------------------------");
         mostrarMatriz(matrizTriINF);
         int suma = sumaEncimaDiagonalSecundaria(m);
