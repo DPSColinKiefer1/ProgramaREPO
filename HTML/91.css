@@ -1,0 +1,13 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    grid-template-rows: 1fr 1fr;    /* Dos filas */
+    width: 100%;                    /* Ajusta el ancho según el tamaño que necesites */
+    height: 100%;                   /* Ajusta la altura según el tamaño que necesites */
+    overflow: hidden;                /* Oculta el contenido que no cabe */
+}
+.item{
+    background-color: chocolate;
+    padding: 10px;
+    text-align: center;
+}
