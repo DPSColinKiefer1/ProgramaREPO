@@ -1,13 +1,10 @@
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
-    grid-template-rows: 1fr 1fr;    /* Dos filas */
-    width: 100%;                    /* Ajusta el ancho según el tamaño que necesites */
-    height: 100%;                   /* Ajusta la altura según el tamaño que necesites */
-    overflow: hidden;                /* Oculta el contenido que no cabe */
+    grid-template-areas: "area area" "menu main" "foot foot"; 
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 100px 200px 100px;
 }
-.item{
-    background-color: chocolate;
-    padding: 10px;
-    text-align: center;
-}
+.item1{grid-area: area;background-color: chocolate;}
+.item2{grid-area: main;background-color: rgb(202, 94, 94);}
+.item3{grid-area: menu;background-color: rgb(84, 84, 212);}
+.item4{grid-area: foot;background-color: rgb(119, 84, 151);}

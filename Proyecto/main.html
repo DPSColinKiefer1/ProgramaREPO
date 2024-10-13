@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Bienvenido al Ventura Restaurant. Disfruta de comida criolla, jugos frescos, pasteles y más.">
+    <title>Ventura Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>Ventura restaurant</h1>
-    <h2>Menu</h2>
-    <div style="display: flex; align-items: center; gap: 20px; margin-right: 50px;">
-        <img src="6628dca2b3cea.jpg" alt="juguiño" style="max-width: 700px; height: auto;">
-        <div style="text-align: right; padding-left: 240px;">
+    <header class="main-header">
+        <h1>Ventura Restaurant</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="main.html">Menú</a></li>
+                <li><a href="about_us.html">Sobre Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header class="intro">
+         <p>Bienvenido a Ventura, un lugar donde la tradición y el sabor se encuentran. Ofrecemos los mejores platos criollos y jugos frescos en un ambiente acogedor. ¡Descubre nuestro menú y ven a visitarnos!</p>
+    </header>
+
+    <h2>Menú</h2>
+    <div class="section">
+        <img src="6628dca2b3cea.jpg" alt="Jugos frescos" class="responsive-image">
+        <div>
             <h3>Jugos</h3>
             <p>JUGO DE NARANJA</p>
             <p>JUGO DE FRESA</p>
@@ -19,12 +34,13 @@
             <p>JUGO DE PAPAYA</p>
             <p>JUGO DE MANGO</p>
             <p>JUGO DE MARACUYÁ</p>
-            <p>JUGO DE SANDIA</p>
-            <p>JUGO DE MANZAN</p>
+            <p>JUGO DE SANDÍA</p>
+            <p>JUGO DE MANZANA</p>
         </div>
     </div>
-    <div style="display: flex; align-items: center; gap: 20px; margin-left: 50px;">
-        <div style="text-align: left; padding-right: 280px;">
+
+    <div class="section">
+        <div>
             <h3>Comida Criolla</h3>
             <p>AJÍ DE GALLINA</p>
             <p>LOMO SALTADO</p>
@@ -33,12 +49,12 @@
             <p>ROCOTO RELLENO</p>
             <p>TACU TACU</p>
         </div>
-        <img src="635b20574d2f5c508f58567d.jpg" alt="criolliño" style="max-width: 700px; height: auto;">
+        <img src="635b20574d2f5c508f58567d.jpg" alt="Comida criolla" class="responsive-image">
     </div>
-    
-    <div style="display: flex; align-items: center; gap: 20px; margin-right: 100px;">
-        <img src="Captura de pantalla 2024-09-09 211955.png" alt="juguiño" style="max-width: 700px; height: auto;">
-        <div style="text-align: right; padding-left: 240px;">        
+
+    <div class="section">
+        <img src="Captura de pantalla 2024-09-09 211955.png" alt="Entradas" class="responsive-image">
+        <div>
             <h3>Entradas</h3>
             <p>ENSALADA CÉSAR</p>
             <p>ANTICUCHOS</p>
@@ -48,9 +64,9 @@
             <p>CHORITOS A LA CHALACA</p>
         </div>
     </div>
-    
-    <div style="display: flex; align-items: center; gap: 20px; margin-left: 50px;">
-        <div style="text-align: left; padding-right: 280px;">            
+
+    <div class="section">
+        <div>
             <h3>Postres</h3>
             <p>SUSPIRO A LA LIMEÑA</p>
             <p>MAZAMORRA MORADA</p>
@@ -58,24 +74,24 @@
             <p>TIRAMISÚ</p>
             <p>CHEESECAKE DE MARACUYÁ</p>
         </div>
-        <img src="Suspiro_a_la_limena.jpg" alt="criolliño" style="max-width: 700px; height: auto;">
+        <img src="Suspiro_a_la_limena.jpg" alt="Postres" class="responsive-image">
     </div>
-    
-    <div style="display: flex; align-items: center; gap: 20px; margin-right: 100px;">
-        <img src="5f58b1bb6d322.r_d.627-418-0.jpeg" alt="juguiño" style="max-width: 700px; height: auto;">
-        <div style="text-align: right; padding-left: 240px;">
+
+    <div class="section">
+        <img src="5f58b1bb6d322.r_d.627-418-0.jpeg" alt="Pastas" class="responsive-image">
+        <div>
             <h3>Pastas</h3>
             <p>PIZZA NAPOLITANA</p>
             <p>PIZZA AMERICANA</p>
             <p>PIZZA HAWAIIANA</p>
             <p>LASAGNA</p>
-            <p>SPAGHETTI DE ALBONDIGAS</p>
-            <p>TALLARINES VERDE</p>
+            <p>SPAGHETTI CON ALBÓNDIGAS</p>
+            <p>TALLARINES VERDES</p>
         </div>
     </div>
-    
-    <div style="display: flex; align-items: center; gap: 20px; margin-left: 50px;">
-        <div style="text-align: left; padding-right: 280px;"> 
+
+    <div class="section">
+        <div>
             <h3>Pasteles</h3>
             <p>RELÁMPAGO DE CARAMELO</p>
             <p>RELÁMPAGO DE CHOCOLATE</p>
@@ -84,22 +100,30 @@
             <p>LUCUMITA</p>
             <p>DURAZNITO</p>
         </div>
-        <img src="pastelin.jpg" alt="criolliño" style="max-width: 700px; height: auto;">
-    </div>    
-    <table border="1">
-        <caption>Horarios</caption>
+        <img src="pastelin.jpg" alt="Pasteles" class="responsive-image">
+    </div>
+
+    <table>
+        <caption>Horarios de Atención</caption>
         <tr>
             <th>Lunes a Viernes</th>
-            <td>6:00 - 18:00</td>
+            <td>6:00 a.m. - 18:00 p.m.</td>
         </tr>
         <tr>
-            <th>Sabado</th>
-            <td>10:00 - 18:00</td>
+            <th>Sábado</th>
+            <td>10:00 a.m - 18:00 p.m.</td>
         </tr>
         <tr>
             <th>Domingo</th>
-            <td>No hay atencion al publico</td>
+            <td>No hay atención al público</td>
         </tr>
     </table>
+    <footer class="main-footer" id="contact">
+        <p>Ubicación: Av. del Sabor, 123 - Lima, Perú</p>
+        <p>Teléfono: +51 987 654 321</p>
+        <p>Horario de atención: Lunes a Viernes 6:00 am - 18:00 pm</p>
+        <p>Sábado 10:00 am - 18:00 pm | Domingo: Cerrado</p>
+        <p>&copy; 2024 Ventura Restaurant</p>
+    </footer>
 </body>
 </html>

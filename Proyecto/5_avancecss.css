@@ -5,11 +5,11 @@
 body{
     background-color: blanchedalmond;
     font-family: 'Times New Roman', Times, serif;
+}
+.titulo{
     display: flex;
-    min-height: 100vh;
-    text-align: center;
-    align-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 h1 {
     color: #d62b0d;
@@ -17,16 +17,97 @@ h1 {
     text-align: center;
     font-size: 80px;
     text-decoration: underline;
-}
-div {
-    display: flex;
-    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
 }
 img {
-    display: block;
-    margin: 40px auto;
+    margin-bottom: 20px;
     width: 70%;
-    border-radius: 20px;
-    border: rgb(221, 197, 168) 5px solid;
+    border-radius: 40px;
+    border: rgb(221, 197, 168) 12px solid;
     cursor: pointer;
+}
+.boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    overflow: hidden;
+    font-size: x-large;
+    font-weight: bold;
+}
+h1:hover {
+    background-color: #d62b0d;
+    color: white;
+}
+img:hover{
+    animation: animacionBonita 3s infinite 0s alternate;    
+}
+@keyframes animacionBonita {
+    0%{
+        border-color: #d62b0d;
+    }
+    30%{
+        border-color: violet;
+    }
+    60%{
+        border-color: blue;
+    }
+    100%{
+        border-color: rgb(221, 197, 168);
+    }
+}
+p{
+    animation: invicible 3s normal 0s;
+}
+.gif{
+    display: none;
+}
+.phone{
+    display: none;
+}
+@keyframes invicible {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@media (max-width: 768px) {
+    .boton img{
+        display: none;
+    }
+    h1{
+        font-size: 40px;
+        margin: 50px;
+    }
+    .texto1 {
+        display: none;
+    }
+    .phone{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .gif{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .ima{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    img{
+        width: 350px;
+        height: auto;
+    }
 }
