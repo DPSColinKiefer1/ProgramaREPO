@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.grid{
+    display: grid;
+    grid-template-areas: "area area area" "menu main right" "menu footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px;
+    margin: 80px;
+    text-align: center;
+    font-size: xx-large;
+}
+.Item1, .Item2, .Item3, .Item4, .Item5 {
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    background-color: rgba(83, 167, 236, 0.76);
+    border: 6px rgb(23, 91, 218) solid;
+}
+.Item1{
+    grid-area: area;
+}
+.Item2{
+    grid-area: menu;
+}
+.Item3{
+    grid-area: main;
+}
+.Item4{
+    grid-area: right;
+}
+.Item5{
+    grid-area: footer;
+}
