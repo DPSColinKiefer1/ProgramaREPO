@@ -34,7 +34,6 @@ public class Lista {
             ejem.siguiente=actual;
             anterior.siguiente=ejem;
         }
-        mostrar();
     }
     public void mostrar(){
         System.out.println("-------");
@@ -65,7 +64,6 @@ public class Lista {
                 before.siguiente=current;
             }
         }
-        mostrar();
     }
     public void mescla(Lista lista1, Lista lista2){
         Lista nueva = new Lista();
@@ -74,7 +72,7 @@ public class Lista {
         if (list1==null && list2==null){
             System.out.println("nada que mesclar");
         }else {
-          while (list1!=null || lista2!=null){
+          while (list1!=null && lista2!=null){
               if (list1!=null){
                   nueva.añadir(list1.dato.codigo,list1.dato.Nombre);
                   list1=list1.siguiente;
