@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviable</title>
+    <link rel="stylesheet" href="914_tarea.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <div class="bars">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Portafolio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        bars=document.querySelector(".bars"); /*se selecciona el primer elemento de la clase .bars*/
+        bars.onclick=function(){ /*en este caso al presionar el elemento "bars se ejecutara la siguiente instruccion*/
+            navBar=document.querySelector(".nav-bar"); /*se selecciona el primer elemento de la clase .nav-bar, es decir la barra de navegacion*/
+            navBar.classList.toggle("active"); /*
+        Esta línea es el núcleo de la funcionalidad. classList.toggle("active") agrega o elimina la clase active del contenedor de navegación (navBar).
+                Si navBar ya tiene la clase active, se eliminará.
+                Si navBar no tiene la clase active, se agregará.
+        Esto cambiará el estado del menú (por ejemplo, si se está mostrando u ocultando, dependiendo de cómo se haya configurado en el CSS).
+        Cuando se hace clic en el elemento .bars (el icono de hamburguesa), se ejecuta el código que agrega o elimina la clase active del contenedor 
+        .nav-bar.*/
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+*{
+    margin: 0; /*Estos son los */
+    padding: 0; /*que se ponen de defecto*/
+    list-style: none; /*lo encargados de ponerle efecto a las listas, al no poner efecto pues estas se le quitan las bolitas*/
+    text-decoration: none; /*quitan la linea debajo de las palabras o su decoración*/
+    box-sizing: border-box; /*controla con se calcula el ancho y largo de los elementos y con border-box ya no se tiene que sumar el padding y 
+    el margin al tamaño del elemento(que es el ancho y el largo) si no que estara incluido con el ancho y largo*/
+}
+header{ /*Se edita el contenedor header*/
+    width: 100%; /*el contenedor y sus elementos ocuparan el 100% o todo el ancho de la pantalla*/
+    height: 80px; /*Su altura sera solo de 80px*/
+    display: flex; /*Se vuelve un contenedor de tipo flex, se pueden alinear de forma horizontal, de izquierda a derecha*/
+    background-color: coral; /*El fondo sera de color coral*/
+    align-items: center; /*Todos los elementos seran alineados en el centro y ya dea ahi repartidos*/
+    justify-content: space-between; /*permite que el espacio entre elementos sea igual, de extremos a extremo*/
+    padding: 0 100px; /*Añade un relleno de 0 arriba y abajo y 100 a los lados, para que no este apegado a las esquinas*/
+}
+.logo{ /*el logo*/
+    font-size: x-large; /*Se cambia la imagen*/
+    font-weight: bolder; /*se agregar grosor*/
+    color: rgb(255, 255, 255); /*se cambia el color*/
+}
+.bars{
+    display: none; /*oculta los elementos del contenedor para que no sean visibles (por ahora)*/
+}
+.nav-bar ul{ /*es el contenedor de la lista*/
+    display: flex; /* se hace flex para que se puedan alinear de forma horizontal, si bien en header ya fue puesto esta propiedad esta solo afecta a
+    sus hijos mas no sus nietos (elementos más internos como el <ul> dentro de .nav-bar)*/
+}
+.nav-bar ul li a{
+    display: block; /*cambia el comportamiento de un elemento en línea (como <a>) para que ocupe todo el ancho disponible en su contenedor y no solo el 
+    que corresponde al texto*/
+    color: white; 
+    font-size: 18px;
+    padding: 10px 25px; /*Añade 10 píxeles de relleno vertical y 25 píxeles de padding horizontal,*/
+    border-radius: 50px; /*le mete un redondeo a ese relleno*/
+    transition: 0.2s; /*pone un delay para que se vea la transicion que se usa para el hover*/
+    margin: 0 5px; /*Añade un espacio de 5 píxeles a la izquierda y derecha de cada enlace, separándolos visualmente*/
+}
+.nav-bar ul li a:hover{ /*tranasicion del hover*/
+    color: black; /*cambia el color de las letras*/
+    background-color: white; /*cambia el fondo*/
+}
+@media(max-width: 800px){ /*ajustes visibles solo cuando se se tenga una pantalla menor de 800px*/
+    .bars{ /*es el "icono" del menu*/
+        display: block; /*ahora se hace visible y ocupa todo el ancho correspondiente*/
+        cursor: pointer;
+    }
+    .bars .line{ /*para los elementos dentro*/
+        width: 30px; /*se añade a ellas un ancho*/
+        height: 3px; /*un largo*/
+        /*esto se hace para que el contenido(que no existe) se vea como un rectangulo o lineas de color con estas propiedades*/
+        margin: 5px 0; /*un margen de 5px arriba y abajo y 0 en los horizontal, con este se hace que el luego de una linea se vaya a la siguiente pero 
+        separadamente, asi con las tres*/
+        background-color: white; /*y un fondo de color para asignarle un color al "icono"*/
+    }
+    .nav-bar{ /*es el contenedor que tiene las opciones del menu*/
+        height: 0; /*al principi estas no estaran visibles por eso tiene una altura de 0*/
+        position: absolute; /*absolute significa que no se movera por el scroll*/
+        top: 80px; /*estara por debajo del header, top indica la posicion en la que se colocara el contenedor, 80 pixel abajo, la misma altura que el 
+        header exactamente, de este modo esta justo debajo*/
+        left: 0; /*se encuentr a apegado a la izquierda*/ 
+        right: 0; /*se encuentra a apegado a la derecha*/
+        width: 100vw; /*ocupa todo el ancho de la pantalla al aparecer*/
+        background-color: coral; /*el contenedor tiene un fondo*/
+        transition: 0.2s; /*pone un delay para que se vea la transicion que se usa para el hover*/
+        overflow: hidden; /*controla lo que sucede con el contenido que se sale de los límites de un contenedor, todo lo que sale se oculta*/
+    }
+    .nav-bar.active{ /*no estan separados, lo que significa que no se esta apuntando al elemento con clase .active de la clase .nav-bar si no que se 
+        esta cuando se agrega la clase .active al contenedor .nav-bar, se le aplica la propiedad height: 450px, osea el nav-bar pasa de una altura de 
+        0px a 450px*/
+        /*en javaScript, cuando un elemento hace uso de la clase "active" en un elemento, esta clase puede ser agregada dinámicamente o eliminada de ese 
+        elemento*/
+        height: 450px; /*su altura sera de 450px*/
+    }
+    .nav-bar ul{ /*la lista*/
+        display: block; /*ahora sera block, ya no es horizontal*/
+        width: fit-content; /*el contenido no se pasara de los limites y usara todo el espacio disponible*/
+        margin: 80px auto 0 auto;/*el espacio superior sera de 80px, el derecho y el izquierdo sera de auto y el de abajo sera de 0*/
+        text-align: center; /*se pone en el centro*/
+        transition: 0.5s; /*delay*/
+        opacity: 0; /*al principio no estara visible, pero apareceran con la transicion*/
+    }
+    .nav-bar.active ul{ /*las listas al estar .nav-bar activo*/
+        opacity: 1; /*seran ahora visibles*/
+    }
+    .nav-bar ul li a{ 
+        margin-bottom: 12px; /*cada enlace tendra un margen de 12px hacia abajo*/
+    }
+}

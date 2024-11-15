@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ejemplo1(){
+            let n1, n2, p;
+            n1=document.producto.numero1.value; //se le da el valor del input a la variable
+            n2=document.producto.numero2.value; //se le da el valor del input a la variable
+            p=n1*n2; //se hace la operacion
+            document.producto.resultado.value=p; //se le da el valor de la variable a el input
+        }
+    </script>
+</head>
+<body>
+    <form name="producto">
+        <label>Numero1</label>
+        <input type="text" name="numero1"><br>
+        <label>Numero2</label>
+        <input type="text" name="numero2"><br>
+        <label>Producto</label>
+        <input type="text" name="resultado"><br>
+        <input type="button" onclick="ejemplo1()" name="aceptar" value="Calcular">
+    </form>
+</body>
+</html>
