@@ -88,3 +88,20 @@ header{ /*Se edita el contenedor header*/
         margin-bottom: 12px; /*cada enlace tendra un margen de 12px hacia abajo*/
     }
 }
+.ventana-flotante{
+    display: none; /*por defecto la ventana esta oculta*/
+    position: fixed; /*esto hace que el contenido siempre este visible sobre la pantalla, asi por mas que hagas scroll este siempre se mostrara*/
+    top: 50%; /*Esta en la mitad de la pantalla*/
+    left: 50%; /*al medio*/
+    /*top: 50% y left: 50%: Colocan la esquina superior izquierda del elemento en el centro de la pantalla.*/
+    transform: translate(-50%, -50%); /*Ajusta la posición del centro de elemento par aque coincidad con el del centro de la pantalla*/
+    width: 360px; /*sera el ancho que tendra*/
+    padding: 20px; /*su espacio interno*/
+    background-color: yellow; /*el color de fondo*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.705); /*el que pone sombras alv, el 0 0 20px es el radio de la sombra, y el ultimo es la opacidad o color*/
+    /*el primer 0 es el desplazamiento horizontal, el segundo 0 es el desplazamiento vertical y el ultimo es la opacidad o tamaño de la sombra*/
+    /*si el mueves puedes hacer que la sombra este a un lado del elemento, que este abajo o al costado, hacer mas grande la sombra o mas pequeño.*/
+}
+.ventana-flotante:target{ /*se activa cuando se da click en el enlace, o se usa el ID de la ventana*/
+    display: block; /*cambia el display por block para que la venta ahora si sea visible*/
+}

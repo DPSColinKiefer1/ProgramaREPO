@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="metodo4()">Escribir</button>
+    <button onclick="metodo5()">Escribir2</button>
+    <button onclick="metodo5()">Escribir2</button>
+    <script>
+        function metodo4(){
+            for(let i=1;i<11;i++){
+                document.write("Numero: "+(i)+"<br>");
+            }
+        }
+        function metodo5(){
+            let i=0;
+            while(i!=20){
+                document.write("Numero: "+(i+1)+"<br>");
+                i++;
+            }
+        }
+    </script>
+</body>
+</html>

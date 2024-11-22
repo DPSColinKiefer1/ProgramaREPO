@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Ingrese numero 1:</label><br>
+    <input type="text" id="num1"><br>
+    <label>Ingrese numero 2:</label><br>
+    <input type="text" id="num2">
+    <button onclick="metodo2()">Sumar</button>
+    <script>
+        function metodo2(){
+            let num1=document.getElementById("num1").value;
+            let num2=document.getElementById("num2").value;
+            let sum=parseFloat(num1)+parseFloat(num2);
+            alert("La suma es: "+sum);
+            ;
+        }
+    </script>
+    <button><a href="ejercicio3.html">Presiona aqui</a></button>
+</body>
+</html>

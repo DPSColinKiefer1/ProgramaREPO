@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Ingrese numero 1:</label><br>
+    <input type="text" id="num1"><br>
+    <button onclick="metodo3()">Es POSITIVO</button>
+    <script>
+        function metodo3(){
+            let valor = document.getElementById("num1").value;
+            if(valor<0){
+                alert("El numero es negativo");
+            }else{
+                alert("El numero es positivo");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,4 +1,8 @@
 package misClases;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class ArbolBinario {
     public NodoBinario raiz;//la raiz como tal sera un nodo
     public ArbolBinario() { //al crear un Arbol esta sera vacia
@@ -36,6 +40,12 @@ public class ArbolBinario {
             * y ahora va a recorrer lo derecho terminando esto termina esa raiz y retrocede a la hora raiz para repetir el proceso*/
         }
     }
+    private NodoBinario encontrarMenor(NodoBinario nodo){ //metodo
+        while(nodo.izquierdo!=null) //al estar los nodos a la izquierda siempre los menores entonces es facil encontrar el menor, simplemente se ejecuta un loop hasta llegar al
+            //ultimo de la raiz que sera el menor
+            nodo=nodo.izquierdo;
+        return nodo; //se retorna el nodo menor
+    }
     //eliminación invocando a auxiliarrecursiva
     public void eliminar(int valor){
         raiz=eliminarRecursivo(raiz,valor); //al igual que al insertar la que hace el verdadero trabajo es el metodo eliminarRecursivo
@@ -56,16 +66,16 @@ public class ArbolBinario {
             if(nodo.derecho==null) return nodo.izquierdo; //al contrario si no
 
             //3. eliminar nodo con AMBOS HIJOS. Si no se cumples las anteriores porque ambas tiene valores entonces sera un caso con raiz con dos hijos.
-            //En este caso se ubica el nodoMenor y este sera el que reemplaza el nodo padre a elimianar
-            NodoBinario sucesor=encontrarMenor(nodo.derecho);
-            nodo.valor=sucesor.valor;
-            nodo.derecho=eliminarRecursivo(nodo.derecho,sucesor.valor);
+            //En este caso se ubica el nodo Menor del hijo derecho y este sera el que reemplaza el nodo padre a eliminar
+            //si el hijo derecho no tiene hijo entonces este directamente reemplazara al padre
+            NodoBinario sucesor=encontrarMenor(nodo.derecho); //se encuentra el nodo menor dentro del hijo derecho para reeemplazar el nodo a eliminar y sera asignado a un nuevo
+            //nodo recien declaro
+            nodo.valor=sucesor.valor; //se le asigna el valor(entero) al elemento a "eliminar", en realidad no lo elimina si no que cambia su valor
+            nodo.derecho=eliminarRecursivo(nodo.derecho,sucesor.valor); //ahora bien, este metodo devuelve un nodo que sera el mismo ingresado con los cambios, en esta linea
+            //se le asigna al nodo.derecho(el hijo derecho del nodo a "eliminar") un nuevo arbol o nodos hijos
+            //se "eliminara" ahora del nodo derecho el nodo que reemplazaria al nodo elimanado y reemplazado visto cuyo valor ya fue asignado y como no puede haber duplicados
+            //entonces se debe "eliminarlo", aunque en realidad solo se lo reemplazara por el nodo menor siguiente
         }
-        return nodo;
-    }
-    private NodoBinario encontrarMenor(NodoBinario nodo){
-        while(nodo.izquierdo!=null)
-            nodo=nodo.izquierdo;
         return nodo;
     }
     private NodoBinario encontrarMayor(NodoBinario nodo){
@@ -94,5 +104,65 @@ public class ArbolBinario {
             nodo.derecho=eliminarRecursivo(nodo.derecho,sucesor.valor);
         }
         return nodo;
+    }
+    public int contarNodos(){
+        return contarNodosRecursivo(raiz);
+    }
+    private int contarNodosRecursivo(NodoBinario nodo){
+        if(nodo==null) {
+            return 0;
+        }
+        return 1+contarNodosRecursivo(nodo.izquierdo)+contarNodosRecursivo(nodo.derecho);
+    }
+    public int sumarValores(){
+        return sumarValoresRecursivo(raiz);
+    }
+    private int sumarValoresRecursivo(NodoBinario nodo){
+        if (nodo==null){
+            return 0;
+        }
+        return nodo.valor+sumarValoresRecursivo(nodo.izquierdo)+sumarValoresRecursivo(nodo.derecho);
+    }
+    public int calcularProfundidad() {
+        return calcularProfundidadRecursivo(raiz);
+    }
+    private int calcularProfundidadRecursivo(NodoBinario nodo){
+        if (nodo==null){
+            return 0;
+        }
+        int profundidadIzquierda=calcularProfundidadRecursivo(nodo.izquierdo);
+        int profundidadDerecha=calcularProfundidadRecursivo(nodo.derecho);
+        return Math.max(profundidadIzquierda,profundidadDerecha) +1;
+    }
+    public int contarHojas(){
+        return contarHojasRecursivo(raiz);
+    }
+
+    private int contarHojasRecursivo(NodoBinario nodo){
+        if (nodo == null){
+            return 0;
+        }
+        if (nodo.izquierdo== null && nodo.derecho==null) {
+            return 1;
+        }
+        return contarHojasRecursivo(nodo.izquierdo)+contarHojasRecursivo(nodo.derecho);
+    }
+    public void recorridoPorAmplitud() {
+        if (raiz==null) {
+            return;
+        }
+        Queue<NodoBinario> cola=new LinkedList<>();
+        cola.add(raiz);
+
+        while (!cola.isEmpty()){
+            NodoBinario nodoActual=cola.poll();
+            System.out.print(nodoActual.valor + " ");
+            if (nodoActual.izquierdo !=null) {
+                cola.add(nodoActual.izquierdo);
+            }
+            if (nodoActual.derecho!= null) {
+                cola.add(nodoActual.derecho);
+            }
+        }
     }
 }

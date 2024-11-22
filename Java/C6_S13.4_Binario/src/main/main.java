@@ -8,10 +8,13 @@ public class main {
         arbol.insertar(40);arbol.insertar(60);
         arbol.insertar(80);arbol.insertar(10);
         arbol.insertar(29);
-        arbol.recorridoInorden(arbol.raiz);
-        System.out.println("");
         arbol.eliminar(50);
         arbol.recorridoInorden(arbol.raiz);
-        System.out.println("");
+        System.out.println();
+        System.out.println(arbol.contarNodos());
+        System.out.println(arbol.sumarValores());
+        System.out.println(arbol.calcularProfundidad());
+        System.out.println(arbol.contarHojas());
+        arbol.recorridoPorAmplitud();
     }
 }
