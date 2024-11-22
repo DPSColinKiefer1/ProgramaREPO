@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: cornflowerblue;
+}
+h1{
+    display: flexbox;
+    color: blue;
+    padding: 20px;
+    border-radius: 15px;
+    margin: auto;
+    background-color: rgb(187, 38, 50);
+    animation: animacionParaH1 6s infinite alternate;
+}
+@keyframes animacionParaH1{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0.8);
+    }
+    0%{
+        background-color: rgb(187, 38, 50);
+        color: cadetblue;
+    }
+    25%{
+        background-color: rgb(187, 38, 155);
+        color: cyan;
+    }
+    50%{
+        background-color: rgb(65, 38, 187);
+        color: aquamarine;
+    }
+    75%{
+        background-color: rgb(38, 157, 187);
+        color: chartreuse;
+    }
+    100%{
+        background-color: rgb(38, 187, 58);
+        color: darkblue;
+    }
+}
+img{
+    width: 400px;
+    height: auto;
+}
+h2{
+    display: flex;
+    margin: 20px;
+    text-align: center;
+}
+h2:hover{
+    animation: 1s infinite alternate animacionParaH2;
+    background-color: springgreen;
+    padding: 10px;
+    border-radius: 20px;
+}
+@keyframes animacionParaH2{
+    0%{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    25%{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    50%{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    75%{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    100%{
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+.mainn, .mainn2{
+    display: flex;
+    background-color: rgb(111, 48, 228);
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    border-radius: 20px;
+}
+p{
+    animation: animacionFuente 3s infinite alternate;
+    background-color: tan;
+    padding: auto;
+    border-radius: 30px;
+}
+@keyframes animacionFuente{
+    0%{
+        background-color: antiquewhite;
+    }
+    50%{
+        background-color: cyan;
+    }
+    100%{
+        background-color: deeppink;
+    }
+}
+.imagenIzquierda{
+    animation: 0.5s infinite alternate imagenIzquierda;
+}
+@keyframes imagenIzquierda{
+    from{
+        transform: translateX(-130px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.imagenDerecha{
+    animation: 0.5s infinite alternate imagenDerecho;
+}
+@keyframes imagenDerecho{
+    from{
+        transform: translateX(130px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.imagenCentro{
+    animation: 0.5s infinite alternate imagenCentro;
+}
+@keyframes imagenCentro{
+    from{
+        transform: scale(0.3);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.imagenCentro:hover, .imagenDerecha:hover, .imagenIzquierda:hover{
+    animation-play-state: paused;
+}
+.imagenRota3D{
+    animation: 1s infinite alternate imagenRota3D;
+}
+.imagenRota3D:hover{
+    animation: 1s infinite alternate imagenRota2D;
+}
+@keyframes imagenRota2D{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes imagenRota3D{
+    from{
+        transform: rotateX(0);
+    }
+    to{
+        transform: rotateX(360deg);
+    }
+}
+.imagenRota3DY{
+    animation: 1s infinite alternate imagenRota3DY;
+}
+.imagenRota3DY:hover{
+    animation: 0.5s infinite alternate imagenRota2DY;
+}
+@keyframes imagenRota2DY{
+    from{
+        transform: skew(0);
+    }
+    to{
+        transform: skew(30deg);
+    }
+}
+@keyframes imagenRota3DY{
+    from{
+        transform: rotateY(0);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+.mainn3{
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    border-radius: 10px;
+    text-align: center;
+    font-size: x-large;
+}
+.textoAgranda{
+    transition-duration: 4s;
+    cursor: pointer;
+}
+.textoAgranda:hover{
+    transition-duration: 3s;
+    transform: scale(2);
+}
+.s{
+    transition-duration: 3s;
+    cursor: pointer;
+}
+.s:hover{
+    transform: translate3d(400px, 0, 0);
+}
