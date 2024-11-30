@@ -10,7 +10,7 @@ public class ListasDobles {
             System.out.println("Nada para eliminar");
             return false;
         }
-        Nodos actual=ultimo; //se crea para ir pasando 
+        Nodos actual=ultimo; //se crea para ir pasando
         Nodos anterior=null;
         boolean encontrado=false;
         do{
